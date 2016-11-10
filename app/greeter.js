@@ -1,15 +1,11 @@
-//Greeter,js
-import React, {Component} from 'react'
-import config from './config.json';
+module.exports = function() {
 
-class Greeter extends Component{
-  render() {
-    return (
-      <div>
-        {config.greetText}
-      </div>
-    );
-  }
-}
-
-export default Greeter
+    function Greeter() {
+        this.letEs = function() {
+            [x,y]=[1,2];
+            [x,y]=[y,x];
+            console.log(x+","+y);
+        }
+    }
+    return new Greeter();
+};
